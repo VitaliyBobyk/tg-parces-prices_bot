@@ -1,1 +1,1 @@
-worker: python bot_parser.py
+worker: python3 bot_parser.py
