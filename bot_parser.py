@@ -9,7 +9,6 @@ import requests
 s = sched.scheduler(time.time, time.sleep)
 def do_something(sc):
     requests.get('https://appleroom.ua/category/iphone')
-    # do your stuff
     s.enter(60, 1, do_something, (sc,))
 
 s.enter(60, 1, do_something, (s,))
