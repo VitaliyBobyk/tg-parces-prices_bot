@@ -6,15 +6,6 @@ import sched, time
 import requests
 
 
-s = sched.scheduler(time.time, time.sleep)
-def do_something(sc):
-    requests.get('https://appleroom.ua/category/iphone')
-    s.enter(60, 1, do_something, (sc,))
-
-s.enter(60, 1, do_something, (s,))
-s.run()
-
-
 room = AppleRoom()
 people = Ipeople()
 
