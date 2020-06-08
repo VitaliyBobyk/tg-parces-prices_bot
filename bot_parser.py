@@ -2,8 +2,6 @@ import telebot
 from telebot import types
 from room import AppleRoom
 from ipeople import Ipeople
-import sched, time
-import requests
 
 
 room = AppleRoom()
@@ -12,7 +10,6 @@ people = Ipeople()
 
 bot = telebot.TeleBot('1125107113:AAGbCs5VnJw5xmfzBDIMWir95ktR24fl9k4')
 upd = bot.get_updates()
-
 
 @bot.message_handler(commands=['help'])
 def help_message(message):
